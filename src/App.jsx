@@ -10,7 +10,7 @@ export default function App() {
     components[0].component;
 
   return (
-    <div className="flex min-h-screen font-sans dark:bg-neutral-900 dark:text-neutral-100">
+    <div className="flex min-h-screen font-sans dark:bg-neutral-700 dark:text-neutral-100">
       
       <Sidebar
         components={components}

@@ -27,7 +27,7 @@ const triggerVariants = {
     rounded: 'rounded-lg',
   },
   bordered: {
-    base:    'px-3.5 py-1.5 text-sm font-medium text-neutral-600 rounded-lg',
+    base:    'px-3.5 py-1.5 text-sm font-medium text-neutral-600 rounded-lg dark:text-neutral-300',
     active:  'bg-white text-neutral-900 shadow-sm border border-neutral-200',
     hover:   'hover:text-neutral-900',
     rounded: 'rounded-lg',

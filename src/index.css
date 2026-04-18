@@ -1,49 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 1. CUSTOM VARIANTS (Must be OUTSIDE @theme) */
+/* Forces dark mode to only look for the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* 2. THEME TOKENS (Variables only) */
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-mono: "JetBrains Mono", "Fira Code", "monospace";
+
+  /* Brand Colors */
+  --color-brand-50: #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+
+  /* Neutrals */
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e7e5e4;
+  --color-neutral-300: #d6d3d1;
+  --color-neutral-400: #a8a29e;
+  --color-neutral-500: #78716c;
+  --color-neutral-600: #57534e;
+  --color-neutral-700: #44403c;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1c1917;
+
+  /* Danger */
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+
+  /* Success */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+
+  /* Warning */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-72: 18rem;
+  --spacing-80: 20rem;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.2s ease forwards;
+  --animate-spin-slow: spin-slow 1s linear infinite;
+}
+
+/* 3. KEYFRAMES (Must be OUTSIDE @theme) */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* 4. BASE STYLES */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-neutral-50 text-neutral-900 antialiased
-           dark:bg-neutral-900 dark:text-neutral-100;
+    background-color: var(--color-neutral-50);
+    color: var(--color-neutral-900);
+    @apply antialiased;
   }
 
-  /* Remove default focus outline */
+  /* Manual Dark Mode Override */
+  .dark body {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-100);
+  }
+
   *:focus {
     outline: none;
   }
 
-  /* Accessible focus ring */
   *:focus-visible {
-    @apply ring-2 ring-violet-500 ring-offset-2
-           dark:ring-offset-neutral-900;
+    @apply ring-2 ring-violet-500 ring-offset-2 dark:ring-offset-neutral-900;
   }
 }
 
-@layer utilities {
-  /* Hide scrollbar but keep scroll */
-  .no-scrollbar::-webkit-scrollbar {
+/* 5. CUSTOM UTILITIES */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
     display: none;
   }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  /* Optional: gradient text */
-  .text-gradient {
-    @apply bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent;
-  }
 }
 
-/* Custom tweaks */
+@utility text-gradient {
+  @apply bg-linear-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent;
+}
+
+/* 6. COMPONENT OVERRIDES */
 .typewriter-text span {
   font-size: 2rem !important;
   font-weight: 700;

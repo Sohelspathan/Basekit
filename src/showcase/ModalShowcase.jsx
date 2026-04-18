@@ -17,7 +17,7 @@ export default function ModalShowcase() {
   const close = ()    => setActive(null)
 
   return (
-    <div className="min-h-screen bg-neutral-50 px-8 py-16 font-sans dark:text-neutral-100 dark:bg-neutral-900">
+    <div className="min-h-screen bg-neutral-50 px-8 py-16 font-sans dark:text-neutral-100 dark:bg-neutral-700">
       <div className="max-w-3xl mx-auto">
         <div className="mb-14">
           <span className="text-xs font-medium text-brand-600 uppercase tracking-widest  ">Basekit / Modal</span>

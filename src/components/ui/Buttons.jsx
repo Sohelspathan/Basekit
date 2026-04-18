@@ -24,6 +24,7 @@ const variants = {
     'hover:bg-neutral-100 hover:border-neutral-300',
     'active:bg-neutral-200 active:scale-[0.98]',
     'disabled:text-neutral-300 disabled:border-neutral-200 disabled:bg-transparent',
+    'dark:text-neutral-300 ',
   ),
 
   danger: clsx(

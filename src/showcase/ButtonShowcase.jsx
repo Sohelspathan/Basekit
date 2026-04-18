@@ -38,7 +38,7 @@ function Section({ title, children }) {
 
 export default function ButtonShowcase() {
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 dark:text-neutral-100 px-8 py-16 font-sans">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-100 px-8 py-16 font-sans">
       <div className="max-w-3xl mx-auto">
 
         {/* Header */}
@@ -46,7 +46,7 @@ export default function ButtonShowcase() {
           <span className="text-xs font-medium text-brand-600 uppercase tracking-widest">
             Basekit / Button
           </span>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900  dark:bg-neutral-900 dark:text-neutral-100">
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900  dark:bg-neutral-700 dark:text-neutral-100">
             Button
           </h1>
           <p className="mt-3 text-neutral-500">
