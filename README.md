@@ -2,7 +2,7 @@
 
 > React + Tailwind component library — design system showcase
 
-**Live demo:** https://basekit.vercel.app
+**Live demo:** https://basekit-eosin.vercel.app/
 
 ---
 
