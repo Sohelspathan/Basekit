@@ -4,29 +4,29 @@ import clsx from 'clsx'
 
 const variants = {
   info: {
-    wrap:  'bg-sky-50    border border-sky-200   text-sky-800',
+    wrap:  'bg-sky-50    border border-sky-200   text-sky-800 dark:bg-sky-900/50 dark:border-sky-700/50 dark:text-sky-300',
     icon:  'text-sky-500',
-    title: 'text-sky-900',
+    title: 'text-sky-900 dark:text-sky-100',
   },
   success: {
-    wrap:  'bg-success-50  border border-success-200  text-success-800',
-    icon:  'text-success-500',
-    title: 'text-success-900',
+    wrap:  'bg-success-50  border border-success-200  text-success-600 dark:bg-success-700/50 dark:border-success-700/50 dark:text-success-300',
+    icon:  'text-success-500 dark:text-success-400',
+    title: 'text-success-700 dark:text-success-100',
   },
   warning: {
-    wrap:  'bg-warning-50  border border-warning-200  text-warning-800',
-    icon:  'text-warning-500',
-    title: 'text-warning-900',
+    wrap:  'bg-warning-50  border border-warning-200  text-warning-700 dark:bg-warning-700/50 dark:border-warning-700/50 dark:text-warning-300',
+    icon:  'text-warning-500 dark:text-warning-400',
+    title: 'text-warning-700 dark:text-warning-100',
   },
   danger: {
-    wrap:  'bg-danger-50   border border-danger-200   text-danger-800',
-    icon:  'text-danger-500',
-    title: 'text-danger-900',
+    wrap:  'bg-danger-50   border border-danger-200   text-danger-700 dark:bg-danger-700/50 dark:border-danger-700/50 dark:text-danger-300',
+    icon:  'text-danger-500 dark:text-danger-400',
+    title: 'text-danger-700 dark:text-red-100',
   },
   neutral: {
-    wrap:  'bg-neutral-50  border border-neutral-200  text-neutral-700',
-    icon:  'text-neutral-500',
-    title: 'text-neutral-900',
+    wrap:  'bg-neutral-50  border border-neutral-200  text-neutral-700 dark:bg-neutral-700/50 dark:border-neutral-700/50 dark:text-neutral-300',
+    icon:  'text-neutral-500 dark:text-neutral-400',
+    title: 'text-neutral-700 dark:text-neutral-500',
   },
 }
 

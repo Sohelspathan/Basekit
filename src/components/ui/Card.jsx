@@ -3,7 +3,7 @@ import clsx from 'clsx'
 // ─── Variant styles ────────────────────────────────────────────────────────────
 
 const variants = {
-  default:  'bg-white border border-neutral-200 shadow-sm',
+  default:  'bg-white border border-neutral-200 shadow-sm ',
   outlined: 'bg-white border border-neutral-200',
   filled:   'bg-neutral-50 border border-neutral-200',
   elevated: 'bg-white shadow-md border border-neutral-100',

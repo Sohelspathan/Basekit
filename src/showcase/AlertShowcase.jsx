@@ -19,11 +19,11 @@ export default function AlertShowcase() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-50 px-8 py-16 font-sans">
+    <div className="min-h-screen bg-neutral-50 px-8 py-16 font-sans dark:text-neutral-100 dark:bg-neutral-900">
       <div className="max-w-2xl mx-auto">
         <div className="mb-14">
           <span className="text-xs font-medium text-brand-600 uppercase tracking-widest">Basekit / Alert</span>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900">Alert</h1>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">Alert</h1>
           <p className="mt-3 text-neutral-500">5 variants · title · dismiss · action button · custom icon.</p>
         </div>
 
